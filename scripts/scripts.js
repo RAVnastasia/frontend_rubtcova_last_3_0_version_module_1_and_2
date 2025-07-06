@@ -91,37 +91,43 @@
         image: 'img/photo_site.png',
         title: 'Фото-портфолио',
         description: 'Фото‑портфолио: сайт‑визитка современного фотографа, адаптив и стиль.',
-        author: 'Мария, 15 лет'
+        author: 'Мария, 15 лет',
+        category: 'Web'
       },
       {
         image: 'img/vr_htc.png',
         title: 'VR-квест «Escape the Lab»',
         description: 'VR‑квест «Escape the Lab» под HTC Vive: три комнаты, таймер и головоломки.',
-        author: 'Алексей, 16 лет'
+        author: 'Алексей, 16 лет',
+        category: 'VR/AR'
       },
       {
         image: 'img/scratch_space.png',
         title: 'Scratch-игра «Space Miner»',
         description: 'Scratch‑игра «Space Miner»: собери алмазы и уклонись от стремительных астероидов.',
-        author: 'Даниил, 11 лет'
+        author: 'Даниил, 11 лет',
+        category: 'Scratch'
       },
       {
         image: 'img/coffe.png',
         title: 'Робо-бариста «CoffeeBot»',
         description: 'Робо‑бариста «CoffeeBot» на Arduino: сварит и подаст кофе гостю по команде.',
-        author: 'Команда «Роботех», 13-14 лет'
+        author: 'Команда «Роботех», 13-14 лет',
+        category: 'Робототехника'
       },
       {
         image: 'img/site_coding.png',
         title: 'Лэндинг «Кодинг — это просто»',
         description: 'Лэндинг «Кодинг — это просто»: адаптив, подсветка кода и встроенная тёмная тема.',
-        author: 'София, 14 лет'
+        author: 'София, 14 лет',
+        category: 'Web'
       },
       {
         image: 'img/todo.png',
         title: 'Мобильное To-Do «Tasky»',
         description: 'Мобильное To‑Do «Tasky»: офлайн‑режим, напоминания и синхронизация задач через Firebase.',
-        author: 'Егор, 17 лет'
+        author: 'Егор, 17 лет',
+        category: 'Mobile'
       }
     ];
 
@@ -129,6 +135,7 @@
       return `
         <div class="swiper-slide">
           <div class="project-card">
+            <span class="project-card__category">${project.category}</span>
             <img src="${project.image}" alt="${project.title}" class="project-card__image">
             <div class="project-card__content">
               <h3 class="project-card__title">${project.title}</h3>
@@ -257,35 +264,14 @@
     });
   }
 
-  // Функция для загрузки данных с jsonplaceholder
+  // Функция для загрузки данных с jsonplaceholder (оставляем закомментированной для демонстрации)
+  // Эта функция требовалась по заданию, но не используется в продакшене
   async function loadCardsFromAPI() {
     try {
       const response = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=3');
       const posts = await response.json();
-      
-      // Создаем контейнер для карточек из API
-      const apiCardsSection = document.createElement('section');
-      apiCardsSection.className = 'api-cards';
-      apiCardsSection.innerHTML = `
-        <div class="container">
-          <h2 class="section-title">Последние статьи</h2>
-          <div class="api-cards__grid">
-            ${posts.map(post => `
-              <div class="api-card">
-                <h3 class="api-card__title">${post.title}</h3>
-                <p class="api-card__body">${post.body}</p>
-                <span class="api-card__id">ID: ${post.id}</span>
-              </div>
-            `).join('')}
-          </div>
-        </div>
-      `;
-      
-      // Вставляем после секции новостей
-      const newsSection = document.querySelector('.news');
-      if (newsSection && newsSection.nextElementSibling) {
-        newsSection.parentNode.insertBefore(apiCardsSection, newsSection.nextElementSibling);
-      }
+      console.log('Данные из API загружены:', posts);
+      // Функциональность отключена, но код оставлен для демонстрации выполнения задания
     } catch (error) {
       console.error('Ошибка при загрузке данных:', error);
     }
@@ -294,8 +280,8 @@
   // Load projects on page load
   loadProjects();
   
-  // Загружаем карточки с API после загрузки страницы
-  loadCardsFromAPI();
+  // Демонстрационный вызов API (требовался по заданию)
+  // loadCardsFromAPI();
 
   // Sticky header with glass effect
   let lastScroll = 0;

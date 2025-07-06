@@ -1,0 +1,116 @@
+/* Projects Section */
+.projects {
+  padding: 80px 0;
+  background: linear-gradient(180deg, var(--white) 0%, var(--light-gray) 100%);
+  overflow: hidden;
+}
+
+.projects-swiper {
+  padding: 0 60px 50px;
+  position: relative;
+  margin: 0 -60px;
+}
+
+.projects-swiper .swiper-slide {
+  height: auto;
+}
+
+/* Ensure all project cards have equal height */
+.projects-swiper .swiper-wrapper {
+  align-items: stretch;
+  padding: 10px 0;
+}
+
+/* Navigation arrows outside cards area */
+.projects-swiper .swiper-button-prev,
+.projects-swiper .swiper-button-next {
+  width: 50px;
+  height: 50px;
+  background: var(--white);
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.projects-swiper .swiper-button-prev::after,
+.projects-swiper .swiper-button-next::after {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--orange);
+}
+
+.projects-swiper .swiper-button-prev {
+  left: 0;
+}
+
+.projects-swiper .swiper-button-next {
+  right: 0;
+}
+
+.projects-swiper .swiper-button-prev:hover,
+.projects-swiper .swiper-button-next:hover {
+  background: var(--orange);
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(255, 140, 0, 0.3);
+}
+
+.projects-swiper .swiper-button-prev:hover::after,
+.projects-swiper .swiper-button-next:hover::after {
+  color: var(--white);
+}
+
+.projects-swiper .swiper-button-disabled {
+  opacity: 0.3;
+}
+
+/* Pagination dots styling */
+.projects-swiper .swiper-pagination {
+  bottom: 0;
+}
+
+.projects-swiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: var(--gray);
+  opacity: 0.3;
+  transition: all 0.3s ease;
+}
+
+.projects-swiper .swiper-pagination-bullet-active {
+  width: 30px;
+  border-radius: 5px;
+  background: var(--orange);
+  opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .projects {
+    padding: 60px 0;
+  }
+  
+  .projects-swiper {
+    padding: 0 40px 40px;
+    margin: 0 -40px;
+  }
+  
+  .projects-swiper .swiper-button-prev,
+  .projects-swiper .swiper-button-next {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .projects-swiper .swiper-button-prev::after,
+  .projects-swiper .swiper-button-next::after {
+    font-size: 16px;
+  }
+  
+  .projects-swiper .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+  }
+  
+  .projects-swiper .swiper-pagination-bullet-active {
+    width: 24px;
+  }
+}

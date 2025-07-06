@@ -1,5 +1,9 @@
 @import "https://cdn.jsdelivr.net/npm/normalize.css";
 
+/* Import BEM blocks */
+@import "blocks/projects.css";
+@import "blocks/project-card.css";
+
 /* CSS Variables */
 :root {
   --orange: #FF8C00;
@@ -691,79 +695,6 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--orange);
 }
 
-/* Projects Section */
-.projects {
-  padding: 80px 0;
-  background: linear-gradient(180deg, var(--white) 0%, var(--light-gray) 100%);
-}
-
-.projects-swiper {
-  padding: 0 0 50px;
-}
-
-.projects-swiper .swiper-slide {
-  height: auto;
-}
-
-.project-card {
-  background: var(--white);
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--shadow);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-}
-
-.project-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 140, 0, 0.1), transparent);
-  transition: left 0.6s;
-}
-
-.project-card:hover::before {
-  left: 100%;
-}
-
-.project-card:hover {
-  transform: translateY(-10px) rotateZ(-1deg);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-}
-
-.project-card__image {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  transition: transform 0.6s ease, filter 0.6s ease;
-}
-
-.project-card:hover .project-card__image {
-  transform: scale(1.1) rotate(2deg);
-  filter: brightness(1.1);
-}
-
-.project-card__content {
-  padding: 25px;
-}
-
-.project-card__title {
-  font-size: 20px;
-  margin-bottom: 15px;
-}
-
-.project-card__description {
-  color: var(--gray);
-  margin-bottom: 20px;
-}
-
-.project-card__author {
-  font-size: 14px;
-  color: var(--gray);
-}
 
 /* Benefits Section */
 .benefits {
@@ -1500,6 +1431,59 @@ h1, h2, h3, h4, h5, h6 {
 
 .swiper-pagination-bullet-active {
   background-color: var(--orange);
+}
+
+/* Projects Swiper Navigation */
+.projects-swiper .swiper-button-next,
+.projects-swiper .swiper-button-prev {
+  width: 50px;
+  height: 50px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  color: var(--orange);
+}
+
+.projects-swiper .swiper-button-next:after,
+.projects-swiper .swiper-button-prev:after {
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.projects-swiper .swiper-button-prev {
+  left: 20px;
+}
+
+.projects-swiper .swiper-button-next {
+  right: 20px;
+}
+
+.projects-swiper .swiper-button-next:hover,
+.projects-swiper .swiper-button-prev:hover {
+  background: var(--orange);
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(255, 140, 0, 0.4);
+}
+
+/* Swiper pagination для проектов */
+.projects-swiper .swiper-pagination {
+  bottom: 0;
+}
+
+.projects-swiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #ddd;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.projects-swiper .swiper-pagination-bullet-active {
+  background: var(--orange);
+  width: 30px;
+  border-radius: 5px;
 }
 
 /* Media Queries */
