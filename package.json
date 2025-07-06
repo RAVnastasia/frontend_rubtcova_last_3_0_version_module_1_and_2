@@ -6,10 +6,9 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:ts": "tsc scripts/cards.ts --outDir scripts --target ES2020 --module ES2020 --lib ES2020,DOM",
+    "build:ts": "echo 'No TypeScript files to build'",
     "build:css": "postcss styles/style.css -o dist/style.min.css",
-    "build:images": "node scripts/optimize-images.js",
-    "build": "npm run build:ts && npm run build:css && npm run build:images",
+    "build": "npm run build:ts && npm run build:css",
     "lint": "eslint scripts/*.js",
     "lint:fix": "eslint scripts/*.js --fix",
     "format": "prettier --write .",
