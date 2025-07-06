@@ -1161,6 +1161,57 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--orange-light);
 }
 
+/* API Cards */
+.api-cards {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+}
+
+.api-cards__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.api-card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.api-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.api-card__title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #1C1C1C;
+  text-transform: capitalize;
+}
+
+.api-card__body {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.api-card__id {
+  display: inline-block;
+  font-size: 14px;
+  color: #FF8C00;
+  font-weight: 600;
+  padding: 5px 10px;
+  background: #FFF4E6;
+  border-radius: 4px;
+}
+
 /* Footer */
 .footer {
   padding: 60px 0 30px;

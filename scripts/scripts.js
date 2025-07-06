@@ -88,37 +88,37 @@
   function loadProjects() {
     const projects = [
       {
-        image: 'assets/img/photo_site.png',
+        image: 'img/photo_site.png',
         title: 'Фото-портфолио',
         description: 'Фото‑портфолио: сайт‑визитка современного фотографа, адаптив и стиль.',
         author: 'Мария, 15 лет'
       },
       {
-        image: 'assets/img/vr_htc.png',
+        image: 'img/vr_htc.png',
         title: 'VR-квест «Escape the Lab»',
         description: 'VR‑квест «Escape the Lab» под HTC Vive: три комнаты, таймер и головоломки.',
         author: 'Алексей, 16 лет'
       },
       {
-        image: 'assets/img/scratch_space.png',
+        image: 'img/scratch_space.png',
         title: 'Scratch-игра «Space Miner»',
         description: 'Scratch‑игра «Space Miner»: собери алмазы и уклонись от стремительных астероидов.',
         author: 'Даниил, 11 лет'
       },
       {
-        image: 'assets/img/coffe.png',
+        image: 'img/coffe.png',
         title: 'Робо-бариста «CoffeeBot»',
         description: 'Робо‑бариста «CoffeeBot» на Arduino: сварит и подаст кофе гостю по команде.',
         author: 'Команда «Роботех», 13-14 лет'
       },
       {
-        image: 'assets/img/site_coding.png',
+        image: 'img/site_coding.png',
         title: 'Лэндинг «Кодинг — это просто»',
         description: 'Лэндинг «Кодинг — это просто»: адаптив, подсветка кода и встроенная тёмная тема.',
         author: 'София, 14 лет'
       },
       {
-        image: 'assets/img/todo.png',
+        image: 'img/todo.png',
         title: 'Мобильное To-Do «Tasky»',
         description: 'Мобильное To‑Do «Tasky»: офлайн‑режим, напоминания и синхронизация задач через Firebase.',
         author: 'Егор, 17 лет'
@@ -257,8 +257,45 @@
     });
   }
 
+  // Функция для загрузки данных с jsonplaceholder
+  async function loadCardsFromAPI() {
+    try {
+      const response = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=3');
+      const posts = await response.json();
+      
+      // Создаем контейнер для карточек из API
+      const apiCardsSection = document.createElement('section');
+      apiCardsSection.className = 'api-cards';
+      apiCardsSection.innerHTML = `
+        <div class="container">
+          <h2 class="section-title">Последние статьи</h2>
+          <div class="api-cards__grid">
+            ${posts.map(post => `
+              <div class="api-card">
+                <h3 class="api-card__title">${post.title}</h3>
+                <p class="api-card__body">${post.body}</p>
+                <span class="api-card__id">ID: ${post.id}</span>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      `;
+      
+      // Вставляем после секции новостей
+      const newsSection = document.querySelector('.news');
+      if (newsSection && newsSection.nextElementSibling) {
+        newsSection.parentNode.insertBefore(apiCardsSection, newsSection.nextElementSibling);
+      }
+    } catch (error) {
+      console.error('Ошибка при загрузке данных:', error);
+    }
+  }
+  
   // Load projects on page load
   loadProjects();
+  
+  // Загружаем карточки с API после загрузки страницы
+  loadCardsFromAPI();
 
   // Sticky header with glass effect
   let lastScroll = 0;
