@@ -3,14 +3,21 @@
   "version": "1.0.0",
   "description": "![Version](https://img.shields.io/badge/version-1.2-orange.svg) ![HTML5](https://img.shields.io/badge/HTML5-E34C26?logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:ts": "tsc scripts/cards.ts --outDir scripts --target ES2020 --module ES2020 --lib ES2020,DOM"
+    "build:ts": "tsc scripts/cards.ts --outDir scripts --target ES2020 --module ES2020 --lib ES2020,DOM",
+    "lint": "eslint scripts/*.js",
+    "lint:fix": "eslint scripts/*.js --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "eslint": "^9.30.1",
+    "prettier": "^3.6.2",
     "typescript": "^5.8.3"
   }
 }
