@@ -3,8 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="IT-Школа 12 - современное обучение программированию и технологиям для детей и подростков">
-  <title>IT-Школа 12 - Обучение программированию для детей</title>
+  <meta name="description" content="IT-Школа 12 в Йошкар-Оле - современное обучение программированию, робототехнике и разработке игр для детей от 7 до 17 лет">
+  <meta name="keywords" content="IT школа, программирование для детей, робототехника, Scratch, Python, Йошкар-Ола">
+  <meta name="author" content="IT-Школа 12">
+  <meta property="og:title" content="IT-Школа 12 - Обучение программированию для детей">
+  <meta property="og:description" content="Современное IT-образование в Йошкар-Оле. Курсы программирования, робототехники, VR/AR разработки для детей">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://itschool12.ru">
+  <title>IT-Школа 12 - Обучение программированию для детей в Йошкар-Оле</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
@@ -292,9 +298,9 @@
         <h2 class="section-title">Запишитесь на бесплатное пробное занятие</h2>
         <p class="trial-form__subtitle">Познакомимся, покажем как проходят занятия, определим уровень и подберём курс</p>
         <form class="trial-form__form">
-          <input type="text" placeholder="Имя ребёнка" required class="trial-form__input">
-          <input type="tel" placeholder="Телефон" required class="trial-form__input">
-          <select class="trial-form__input" required>
+          <input type="text" placeholder="Имя ребёнка" required class="trial-form__input" name="child_name" autocomplete="name">
+          <input type="tel" placeholder="Телефон" required class="trial-form__input" name="phone" autocomplete="tel" pattern="[+]?[0-9\s\-\(\)]+">
+          <select class="trial-form__input" required name="course">
             <option value="">Выберите курс</option>
             <option>Scratch для начинающих</option>
             <option>Web-разработка</option>
@@ -372,40 +378,54 @@
           <h3 class="footer__logo">IT-Школа 12</h3>
           <p>Современное IT-образование для детей и подростков</p>
           <div class="footer__social">
-            <a href="#" aria-label="VKontakte">VK</a>
-            <a href="#" aria-label="Telegram">TG</a>
-            <a href="#" aria-label="YouTube">YT</a>
+            <a href="https://vk.com/itschool12?from=groups" target="_blank" aria-label="ВКонтакте" rel="noopener noreferrer">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M15.07 2H8.93C3.33 2 2 3.33 2 8.93v6.14C2 20.67 3.33 22 8.93 22h6.14c5.6 0 6.93-1.33 6.93-6.93V8.93C22 3.33 20.67 2 15.07 2zm3.08 14.27h-1.73c-.65 0-.85-.52-2.03-1.7-1.05-1-1.52-1.1-1.78-1.1-.37 0-.48.11-.48.62v1.55c0 .44-.14.7-1.31.7-1.93 0-4.07-1.17-5.57-3.35C3.23 10.24 2.5 7.84 2.5 7.48c0-.26.11-.5.62-.5h1.73c.46 0 .64.21.82.7.91 2.59 2.43 4.86 3.05 4.86.23 0 .34-.11.34-.71V9.25c-.07-1.27-.74-1.38-.74-1.84 0-.21.17-.43.46-.43h2.72c.39 0 .52.21.52.67v3.46c0 .39.18.52.29.52.23 0 .43-.13.86-.56 1.34-1.53 2.29-3.88 2.29-3.88.13-.26.34-.5.8-.5h1.73c.52 0 .64.27.52.66-.22.99-2.36 4.04-2.36 4.04-.19.3-.26.44 0 .78.19.26.82.78 1.25 1.25.77.85 1.37 1.56 1.53 2.04.17.49-.08.74-.59.74z"/>
+              </svg>
+            </a>
+            <a href="https://t.me/it12ru" target="_blank" aria-label="Telegram" rel="noopener noreferrer">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/>
+              </svg>
+            </a>
+            <a href="https://rutube.ru/channel/37467988/" target="_blank" aria-label="Rutube" rel="noopener noreferrer">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
+              </svg>
+            </a>
           </div>
         </div>
         <div class="footer__column">
           <h4>Курсы</h4>
           <ul>
-            <li><a href="#">Scratch</a></li>
-            <li><a href="#">Web-разработка</a></li>
-            <li><a href="#">Мобильные приложения</a></li>
-            <li><a href="#">Робототехника</a></li>
+            <li><a href="#courses">Scratch для начинающих</a></li>
+            <li><a href="#courses">Web-разработка</a></li>
+            <li><a href="#courses">Мобильные приложения</a></li>
+            <li><a href="#courses">Робототехника</a></li>
+            <li><a href="#courses">VR/AR разработка</a></li>
+            <li><a href="#courses">Python Pro</a></li>
           </ul>
         </div>
         <div class="footer__column">
           <h4>Информация</h4>
           <ul>
-            <li><a href="#">О школе</a></li>
-            <li><a href="#">Преподаватели</a></li>
-            <li><a href="#">Расписание</a></li>
-            <li><a href="#">Цены</a></li>
+            <li><a href="#about">О школе</a></li>
+            <li><a href="#reviews">Отзывы</a></li>
+            <li><a href="#projects">Проекты учеников</a></li>
+            <li><a href="#news">Новости</a></li>
           </ul>
         </div>
         <div class="footer__column">
           <h4>Контакты</h4>
-          <p>📍 г. Москва, ул. Программистов, 12</p>
-          <p>📞 +7 (495) 123-45-67</p>
-          <p>✉️ info@itschool12.ru</p>
-          <p>🕐 Пн-Сб: 10:00-20:00</p>
+          <p>📍 г. Йошкар-Ола, ул. Кремлёвская, 44</p>
+          <p>📞 <a href="tel:+79613743383">+7 (961) 374-33-83</a></p>
+          <p>✉️ <a href="mailto:i@itschool12.ru">i@itschool12.ru</a></p>
+          <p>🕐 Пн-Пт: 09:00-18:00</p>
         </div>
       </div>
       <div class="footer__bottom">
         <p>&copy; 2025 IT-Школа 12. Все права защищены.</p>
-        <a href="#">Политика конфиденциальности</a>
+        <a href="https://drive.google.com/file/d/1FVNE_FivezUlaxwi5S-3vcnT5Vx7sfBA/view" target="_blank" rel="noopener noreferrer">Политика конфиденциальности</a>
       </div>
     </div>
   </footer>
@@ -417,11 +437,11 @@
       <button class="modal__close" aria-label="Закрыть">&times;</button>
       <h3 class="modal__title">Записаться на курс</h3>
       <form class="modal__form">
-        <input type="text" placeholder="Имя родителя" required>
-        <input type="text" placeholder="Имя ребёнка" required>
-        <input type="tel" placeholder="Телефон" required>
-        <input type="email" placeholder="Email" required>
-        <select required>
+        <input type="text" placeholder="Имя родителя" required name="parent_name" autocomplete="name">
+        <input type="text" placeholder="Имя ребёнка" required name="child_name">
+        <input type="tel" placeholder="Телефон" required name="phone" autocomplete="tel" pattern="[+]?[0-9\s\-\(\)]+">
+        <input type="email" placeholder="Email" required name="email" autocomplete="email">
+        <select required name="course">
           <option value="">Выберите курс</option>
           <option>Scratch для начинающих</option>
           <option>Web-разработка</option>
@@ -430,7 +450,7 @@
           <option>VR/AR разработка</option>
           <option>Python Pro</option>
         </select>
-        <textarea placeholder="Комментарий (необязательно)" rows="3"></textarea>
+        <textarea placeholder="Комментарий (необязательно)" rows="3" name="comment"></textarea>
         <button type="submit" class="btn btn--primary btn--large">Отправить заявку</button>
       </form>
     </div>

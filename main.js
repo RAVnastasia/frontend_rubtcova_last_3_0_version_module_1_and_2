@@ -172,11 +172,28 @@
     }
   });
 
-  // Prevent form submission for demo
+  // Form submission handling
   document.querySelectorAll('form').forEach(form => {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
+      
+      // Get form data
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+      
+      // Simple validation
+      const phone = data.phone;
+      if (phone && !phone.match(/^[+]?[0-9\s\-\(\)]+$/)) {
+        alert('Пожалуйста, введите корректный номер телефона');
+        return;
+      }
+      
+      // Show success message
       alert('Спасибо за заявку! Мы свяжемся с вами в ближайшее время.');
+      
+      // Log form data (in production, this would be sent to a server)
+      console.log('Форма отправлена:', data);
+      
       if (modal.classList.contains('modal--open')) {
         closeModal();
       }
@@ -383,7 +400,11 @@
     });
   };
   
-  // Initialize hover effects
-  setTimeout(addHoverEffects, 1000);
+  // Initialize hover effects after DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', addHoverEffects);
+  } else {
+    setTimeout(addHoverEffects, 100);
+  }
 
 })();
