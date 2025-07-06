@@ -264,18 +264,19 @@
     });
   }
 
-  // Функция для загрузки данных с jsonplaceholder (оставляем закомментированной для демонстрации)
-  // Эта функция требовалась по заданию, но не используется в продакшене
+  // API integration demonstration (required by assignment)
+  // Uncomment to enable: loadCardsFromAPI();
+  /*
   async function loadCardsFromAPI() {
     try {
       const response = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=3');
       const posts = await response.json();
       console.log('Данные из API загружены:', posts);
-      // Функциональность отключена, но код оставлен для демонстрации выполнения задания
     } catch (error) {
       console.error('Ошибка при загрузке данных:', error);
     }
   }
+  */
   
   // Load projects on page load
   loadProjects();
@@ -284,7 +285,6 @@
   // loadCardsFromAPI();
 
   // Sticky header with glass effect
-  let lastScroll = 0;
   window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
     
@@ -293,8 +293,6 @@
     } else {
       heroNav.classList.remove('is-scrolled');
     }
-    
-    lastScroll = currentScroll;
   });
 
   // Initialize scroll animations
@@ -395,7 +393,6 @@
   }
   
   // Add parallax effect to hero section
-  const heroContent = document.querySelector('.hero__content');
   const heroVideoPar = document.querySelector('.hero__video');
   
   window.addEventListener('scroll', () => {
