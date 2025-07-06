@@ -88,28 +88,28 @@
   .projects {
     padding: 60px 0;
   }
-  
+
   .projects-swiper {
     padding: 0 40px 40px;
     margin: 0 -40px;
   }
-  
+
   .projects-swiper .swiper-button-prev,
   .projects-swiper .swiper-button-next {
     width: 40px;
     height: 40px;
   }
-  
+
   .projects-swiper .swiper-button-prev::after,
   .projects-swiper .swiper-button-next::after {
     font-size: 16px;
   }
-  
+
   .projects-swiper .swiper-pagination-bullet {
     width: 8px;
     height: 8px;
   }
-  
+
   .projects-swiper .swiper-pagination-bullet-active {
     width: 24px;
   }

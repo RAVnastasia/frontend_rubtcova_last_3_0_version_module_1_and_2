@@ -1,5 +1,5 @@
 // main.js
-(function() {
+(function () {
   'use strict';
 
   // DOM elements
@@ -25,13 +25,13 @@
         }, 300);
       }
     }, 500);
-    
+
     // Initialize animations on scroll after a short delay
     setTimeout(() => {
       initScrollAnimations();
     }, 100);
   });
-  
+
   // Fallback in case load event doesn't fire
   setTimeout(() => {
     if (preloader && !preloader.classList.contains('preloader--hidden')) {
@@ -63,8 +63,8 @@
         },
         992: {
           slidesPerView: 3,
-        }
-      }
+        },
+      },
     });
 
     // Reviews swiper
@@ -80,7 +80,7 @@
       autoplay: {
         delay: 5000,
         disableOnInteraction: false,
-      }
+      },
     });
   }
 
@@ -92,47 +92,51 @@
         title: 'Фото-портфолио',
         description: 'Фото‑портфолио: сайт‑визитка современного фотографа, адаптив и стиль.',
         author: 'Мария, 15 лет',
-        category: 'Web'
+        category: 'Web',
       },
       {
         image: 'img/vr_htc.png',
         title: 'VR-квест «Escape the Lab»',
         description: 'VR‑квест «Escape the Lab» под HTC Vive: три комнаты, таймер и головоломки.',
         author: 'Алексей, 16 лет',
-        category: 'VR/AR'
+        category: 'VR/AR',
       },
       {
         image: 'img/scratch_space.png',
         title: 'Scratch-игра «Space Miner»',
-        description: 'Scratch‑игра «Space Miner»: собери алмазы и уклонись от стремительных астероидов.',
+        description:
+          'Scratch‑игра «Space Miner»: собери алмазы и уклонись от стремительных астероидов.',
         author: 'Даниил, 11 лет',
-        category: 'Scratch'
+        category: 'Scratch',
       },
       {
         image: 'img/coffe.png',
         title: 'Робо-бариста «CoffeeBot»',
         description: 'Робо‑бариста «CoffeeBot» на Arduino: сварит и подаст кофе гостю по команде.',
         author: 'Команда «Роботех», 13-14 лет',
-        category: 'Робототехника'
+        category: 'Робототехника',
       },
       {
         image: 'img/site_coding.png',
         title: 'Лэндинг «Кодинг — это просто»',
-        description: 'Лэндинг «Кодинг — это просто»: адаптив, подсветка кода и встроенная тёмная тема.',
+        description:
+          'Лэндинг «Кодинг — это просто»: адаптив, подсветка кода и встроенная тёмная тема.',
         author: 'София, 14 лет',
-        category: 'Web'
+        category: 'Web',
       },
       {
         image: 'img/todo.png',
         title: 'Мобильное To-Do «Tasky»',
-        description: 'Мобильное To‑Do «Tasky»: офлайн‑режим, напоминания и синхронизация задач через Firebase.',
+        description:
+          'Мобильное To‑Do «Tasky»: офлайн‑режим, напоминания и синхронизация задач через Firebase.',
         author: 'Егор, 17 лет',
-        category: 'Mobile'
-      }
+        category: 'Mobile',
+      },
     ];
 
-    const projectsHTML = projects.map((project) => {
-      return `
+    const projectsHTML = projects
+      .map((project) => {
+        return `
         <div class="swiper-slide">
           <div class="project-card">
             <span class="project-card__category">${project.category}</span>
@@ -145,7 +149,8 @@
           </div>
         </div>
       `;
-    }).join('');
+      })
+      .join('');
 
     projectsContainer.innerHTML = projectsHTML;
 
@@ -165,7 +170,7 @@
   }
 
   // Modal event listeners
-  modalOpenButtons.forEach(button => {
+  modalOpenButtons.forEach((button) => {
     button.addEventListener('click', openModal);
   });
 
@@ -180,27 +185,27 @@
   });
 
   // Form submission handling
-  document.querySelectorAll('form').forEach(form => {
+  document.querySelectorAll('form').forEach((form) => {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-      
+
       // Get form data
       const formData = new FormData(form);
       const data = Object.fromEntries(formData.entries());
-      
+
       // Simple validation
       const phone = data.phone;
       if (phone && !phone.match(/^[+]?[0-9\s\-\(\)]+$/)) {
         alert('Пожалуйста, введите корректный номер телефона');
         return;
       }
-      
+
       // Show success message
       alert('Спасибо за заявку! Мы свяжемся с вами в ближайшее время.');
-      
+
       // Log form data (in production, this would be sent to a server)
       console.log('Форма отправлена:', data);
-      
+
       if (modal.classList.contains('modal--open')) {
         closeModal();
       }
@@ -215,7 +220,7 @@
     });
 
     // Close menu when clicking on a link
-    menu.querySelectorAll('a').forEach(link => {
+    menu.querySelectorAll('a').forEach((link) => {
       link.addEventListener('click', () => {
         menu.classList.remove('active');
       });
@@ -223,8 +228,8 @@
   }
 
   // Smooth scroll for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener('click', function (e) {
       const href = this.getAttribute('href');
       if (href !== '#') {
         e.preventDefault();
@@ -232,7 +237,7 @@
         if (target) {
           target.scrollIntoView({
             behavior: 'smooth',
-            block: 'start'
+            block: 'start',
           });
         }
       }
@@ -247,16 +252,20 @@
       // Attempt to play video
       const playPromise = heroVideoElement.play();
       if (playPromise !== undefined) {
-        playPromise.catch(error => {
+        playPromise.catch((error) => {
           console.log('Video autoplay was prevented:', error);
           // If autoplay is prevented, play on user interaction
-          document.addEventListener('click', () => {
-            heroVideoElement.play();
-          }, { once: true });
+          document.addEventListener(
+            'click',
+            () => {
+              heroVideoElement.play();
+            },
+            { once: true }
+          );
         });
       }
     });
-    
+
     // Handle video error
     heroVideoElement.addEventListener('error', (e) => {
       console.error('Video loading error:', e);
@@ -277,17 +286,17 @@
     }
   }
   */
-  
+
   // Load projects on page load
   loadProjects();
-  
+
   // Демонстрационный вызов API (требовался по заданию)
   // loadCardsFromAPI();
 
   // Sticky header with glass effect
   window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
-    
+
     if (currentScroll > 100) {
       heroNav.classList.add('is-scrolled');
     } else {
@@ -306,9 +315,9 @@
       { selector: '.news__card', animation: 'fadeInLeft', stagger: true },
       { selector: '.about__text p', animation: 'fadeInUp', stagger: true },
       { selector: '.trial-form__content', animation: 'scaleIn' },
-      { selector: '.reviews__card', animation: 'fadeInUp' }
+      { selector: '.reviews__card', animation: 'fadeInUp' },
     ];
-    
+
     animateElements.forEach(({ selector, animation, stagger }) => {
       const elements = document.querySelectorAll(selector);
       elements.forEach((el, index) => {
@@ -319,32 +328,32 @@
         }
       });
     });
-    
+
     // Create intersection observer
     const observerOptions = {
       threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
+      rootMargin: '0px 0px -50px 0px',
     };
-    
+
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const el = entry.target;
           const animation = el.dataset.animation;
           const delay = el.dataset.delay;
-          
+
           el.classList.add('animated', animation);
           if (delay) {
             el.classList.add(`delay-${delay}`);
           }
-          
+
           observer.unobserve(el);
         }
       });
     }, observerOptions);
-    
+
     // Observe all elements
-    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+    document.querySelectorAll('.animate-on-scroll').forEach((el) => {
       observer.observe(el);
     });
   }
@@ -355,7 +364,7 @@
   let hasAnimated = false;
 
   function animateStats() {
-    statsNumbers.forEach(stat => {
+    statsNumbers.forEach((stat) => {
       const target = parseInt(stat.getAttribute('data-target'));
       const suffix = stat.getAttribute('data-suffix') || '';
       const duration = 2000; // 2 seconds
@@ -377,54 +386,58 @@
   }
 
   // Intersection Observer for stats animation
-  const statsObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && !hasAnimated) {
-        hasAnimated = true;
-        setTimeout(animateStats, 300); // Small delay for better effect
-      }
-    });
-  }, {
-    threshold: 0.5 // Trigger when 50% of the section is visible
-  });
+  const statsObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && !hasAnimated) {
+          hasAnimated = true;
+          setTimeout(animateStats, 300); // Small delay for better effect
+        }
+      });
+    },
+    {
+      threshold: 0.5, // Trigger when 50% of the section is visible
+    }
+  );
 
   if (statsSection) {
     statsObserver.observe(statsSection);
   }
-  
+
   // Add parallax effect to hero section
   const heroVideoPar = document.querySelector('.hero__video');
-  
+
   window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const parallaxSpeed = 0.5;
-    
+
     if (heroVideoPar && scrolled < window.innerHeight) {
       heroVideoPar.style.transform = `translateY(${scrolled * parallaxSpeed}px)`;
     }
   });
-  
+
   // Add hover effects to cards
   const addHoverEffects = () => {
-    const cards = document.querySelectorAll('.courses__card, .project-card, .benefits__item, .news__card');
-    
-    cards.forEach(card => {
-      card.addEventListener('mouseenter', function(e) {
+    const cards = document.querySelectorAll(
+      '.courses__card, .project-card, .benefits__item, .news__card'
+    );
+
+    cards.forEach((card) => {
+      card.addEventListener('mouseenter', function (e) {
         const rect = this.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
-        
+
         this.style.setProperty('--mouse-x', `${x}px`);
         this.style.setProperty('--mouse-y', `${y}px`);
       });
     });
   };
-  
+
   // Initialize hover effects after DOM is ready
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', addHoverEffects);
   } else {
     setTimeout(addHoverEffects, 100);
   }
-
 })();

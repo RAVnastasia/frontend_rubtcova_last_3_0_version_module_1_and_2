@@ -26,38 +26,41 @@ class ProjectCardsManager {
         image: 'img/photo_site.png',
         title: 'Фото-портфолио',
         description: 'Фото‑портфолио: сайт‑визитка современного фотографа, адаптив и стиль.',
-        author: 'Мария, 15 лет'
+        author: 'Мария, 15 лет',
       },
       {
         image: 'img/vr_htc.png',
         title: 'VR-квест «Escape the Lab»',
         description: 'VR‑квест «Escape the Lab» под HTC Vive: три комнаты, таймер и головоломки.',
-        author: 'Алексей, 16 лет'
+        author: 'Алексей, 16 лет',
       },
       {
         image: 'img/scratch_space.png',
         title: 'Scratch-игра «Space Miner»',
-        description: 'Scratch‑игра «Space Miner»: собери алмазы и уклонись от стремительных астероидов.',
-        author: 'Даниил, 11 лет'
+        description:
+          'Scratch‑игра «Space Miner»: собери алмазы и уклонись от стремительных астероидов.',
+        author: 'Даниил, 11 лет',
       },
       {
         image: 'img/coffe.png',
         title: 'Робо-бариста «CoffeeBot»',
         description: 'Робо‑бариста «CoffeeBot» на Arduino: сварит и подаст кофе гостю по команде.',
-        author: 'Команда «Роботех», 13-14 лет'
+        author: 'Команда «Роботех», 13-14 лет',
       },
       {
         image: 'img/site_coding.png',
         title: 'Лэндинг «Кодинг — это просто»',
-        description: 'Лэндинг «Кодинг — это просто»: адаптив, подсветка кода и встроенная тёмная тема.',
-        author: 'София, 14 лет'
+        description:
+          'Лэндинг «Кодинг — это просто»: адаптив, подсветка кода и встроенная тёмная тема.',
+        author: 'София, 14 лет',
       },
       {
         image: 'img/todo.png',
         title: 'Мобильное To-Do «Tasky»',
-        description: 'Мобильное To‑Do «Tasky»: офлайн‑режим, напоминания и синхронизация задач через Firebase.',
-        author: 'Егор, 17 лет'
-      }
+        description:
+          'Мобильное To‑Do «Tasky»: офлайн‑режим, напоминания и синхронизация задач через Firebase.',
+        author: 'Егор, 17 лет',
+      },
     ];
   }
 
@@ -84,9 +87,7 @@ class ProjectCardsManager {
       return;
     }
 
-    const projectsHTML = this.projects
-      .map(project => this.createProjectCard(project))
-      .join('');
+    const projectsHTML = this.projects.map((project) => this.createProjectCard(project)).join('');
 
     this.container.innerHTML = projectsHTML;
   }
@@ -129,7 +130,7 @@ class ApiCardsManager {
   // Метод для рендеринга карточек из API
   public async renderApiCards(): Promise<void> {
     const posts = await this.loadCards(3);
-    
+
     if (posts.length === 0) {
       return;
     }
@@ -140,7 +141,7 @@ class ApiCardsManager {
       <div class="container">
         <h2 class="section-title">Последние статьи</h2>
         <div class="api-cards__grid">
-          ${posts.map(post => this.createApiCard(post)).join('')}
+          ${posts.map((post) => this.createApiCard(post)).join('')}
         </div>
       </div>
     `;

@@ -1,14 +1,14 @@
-@import "https://cdn.jsdelivr.net/npm/normalize.css";
+@import 'https://cdn.jsdelivr.net/npm/normalize.css';
 
 /* Import BEM blocks */
-@import "blocks/projects.css";
-@import "blocks/project-card.css";
+@import 'blocks/projects.css';
+@import 'blocks/project-card.css';
 
 /* CSS Variables */
 :root {
-  --orange: #FF8C00;
-  --orange-light: #FFB347;
-  --black: #1C1C1C;
+  --orange: #ff8c00;
+  --orange-light: #ffb347;
+  --black: #1c1c1c;
   --gray: #666;
   --light-gray: #f5f5f5;
   --white: #ffffff;
@@ -42,7 +42,12 @@ body {
 }
 
 /* Typography */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 600;
   line-height: 1.2;
   margin: 0;
@@ -171,7 +176,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* Hero Section */
@@ -179,7 +186,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   min-height: 100vh;
   overflow: hidden;
-  background: linear-gradient(180deg, #FF8C00, #FFFFFF);
+  background: linear-gradient(180deg, #ff8c00, #ffffff);
 }
 
 .hero__nav {
@@ -238,13 +245,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @keyframes logoFloat {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-3px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
 }
 
 @keyframes logoPulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.1); }
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
 }
 
 .hero__menu a {
@@ -513,9 +530,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @keyframes shine {
-  0% { opacity: 0; }
-  50% { opacity: 1; }
-  100% { opacity: 0; }
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .about__feature-icon {
@@ -631,7 +654,11 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 140, 0, 0.1), transparent);
+  background: radial-gradient(
+    circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(255, 140, 0, 0.1),
+    transparent
+  );
   opacity: 0;
   transition: opacity 0.3s ease;
   pointer-events: none;
@@ -695,7 +722,6 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--orange);
 }
 
-
 /* Benefits Section */
 .benefits {
   padding: 80px 0;
@@ -750,7 +776,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @keyframes bounceIcon {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -838,7 +865,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Trial Form Section */
 .trial-form {
   padding: 80px 0;
-  background: linear-gradient(135deg, #FFB347 0%, #FF8C00 100%);
+  background: linear-gradient(135deg, #ffb347 0%, #ff8c00 100%);
   position: relative;
   overflow: hidden;
 }
@@ -1000,7 +1027,9 @@ h1, h2, h3, h4, h5, h6 {
   background: rgba(255, 140, 0, 0.1);
   border-radius: 50%;
   transform: translate(-50%, -50%);
-  transition: width 0.6s ease, height 0.6s ease;
+  transition:
+    width 0.6s ease,
+    height 0.6s ease;
 }
 
 .partners__item:hover::before {
@@ -1110,7 +1139,9 @@ h1, h2, h3, h4, h5, h6 {
   padding: 30px;
   border-radius: 16px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .api-card:hover {
@@ -1122,7 +1153,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 15px;
-  color: #1C1C1C;
+  color: #1c1c1c;
   text-transform: capitalize;
 }
 
@@ -1136,10 +1167,10 @@ h1, h2, h3, h4, h5, h6 {
 .api-card__id {
   display: inline-block;
   font-size: 14px;
-  color: #FF8C00;
+  color: #ff8c00;
   font-weight: 600;
   padding: 5px 10px;
-  background: #FFF4E6;
+  background: #fff4e6;
   border-radius: 4px;
 }
 
@@ -1175,7 +1206,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @keyframes floatBubble {
-  0%, 100% {
+  0%,
+  100% {
     transform: translate(0, 0) rotate(0deg);
   }
   33% {
@@ -1491,11 +1523,11 @@ h1, h2, h3, h4, h5, h6 {
   .container {
     max-width: 992px;
   }
-  
+
   .hero__title {
     font-size: 48px;
   }
-  
+
   .courses__grid {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
@@ -1506,7 +1538,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 32px;
     margin-bottom: 40px;
   }
-  
+
   .hero__menu {
     display: none;
     position: absolute;
@@ -1518,27 +1550,27 @@ h1, h2, h3, h4, h5, h6 {
     padding: 20px;
     gap: 15px;
   }
-  
+
   .hero__menu.active {
     display: flex;
   }
-  
+
   .hero__menu-burger {
     display: flex;
   }
-  
+
   .about__features {
     grid-template-columns: 1fr;
   }
-  
+
   .stats__grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .benefits__grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .footer__content {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1548,68 +1580,68 @@ h1, h2, h3, h4, h5, h6 {
   .container {
     padding: 0 15px;
   }
-  
+
   .hero__title {
     font-size: 36px;
   }
-  
+
   .hero__subtitle {
     font-size: 16px;
   }
-  
+
   .section-title {
     font-size: 28px;
     margin-bottom: 30px;
   }
-  
+
   section {
     padding: 60px 0;
   }
-  
+
   .hero__nav {
     padding: 10px 0;
   }
-  
+
   .trial-form__content {
     padding: 40px 25px;
     margin: 0 15px;
     border-radius: 20px;
   }
-  
+
   .stats__grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
-  
+
   .stats__number {
     font-size: 36px;
   }
-  
+
   .courses__grid {
     grid-template-columns: 1fr;
   }
-  
+
   .benefits__grid {
     grid-template-columns: 1fr;
   }
-  
+
   .news__grid {
     grid-template-columns: 1fr;
   }
-  
+
   .partners__grid {
     animation-duration: 15s;
   }
-  
+
   .footer__content {
     grid-template-columns: 1fr;
   }
-  
+
   .footer__bottom {
     flex-direction: column;
     text-align: center;
   }
-  
+
   .modal__content {
     padding: 30px 20px;
   }
