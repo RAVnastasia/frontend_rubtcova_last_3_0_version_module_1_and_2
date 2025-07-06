@@ -88,21 +88,21 @@
   function loadProjects() {
     const projects = [
       {
-        image: 'img/photo_site.png',
+        image: 'img/webp/photo_site.webp',
         title: 'Фото-портфолио',
         description: 'Фото‑портфолио: сайт‑визитка современного фотографа, адаптив и стиль.',
         author: 'Мария, 15 лет',
         category: 'Web',
       },
       {
-        image: 'img/vr_htc.png',
+        image: 'img/webp/vr_htc.webp',
         title: 'VR-квест «Escape the Lab»',
         description: 'VR‑квест «Escape the Lab» под HTC Vive: три комнаты, таймер и головоломки.',
         author: 'Алексей, 16 лет',
         category: 'VR/AR',
       },
       {
-        image: 'img/scratch_space.png',
+        image: 'img/webp/scratch_space.webp',
         title: 'Scratch-игра «Space Miner»',
         description:
           'Scratch‑игра «Space Miner»: собери алмазы и уклонись от стремительных астероидов.',
@@ -110,14 +110,14 @@
         category: 'Scratch',
       },
       {
-        image: 'img/coffe.png',
+        image: 'img/webp/coffe.webp',
         title: 'Робо-бариста «CoffeeBot»',
         description: 'Робо‑бариста «CoffeeBot» на Arduino: сварит и подаст кофе гостю по команде.',
         author: 'Команда «Роботех», 13-14 лет',
         category: 'Робототехника',
       },
       {
-        image: 'img/site_coding.png',
+        image: 'img/webp/site_coding.webp',
         title: 'Лэндинг «Кодинг — это просто»',
         description:
           'Лэндинг «Кодинг — это просто»: адаптив, подсветка кода и встроенная тёмная тема.',
@@ -125,7 +125,7 @@
         category: 'Web',
       },
       {
-        image: 'img/todo.png',
+        image: 'img/webp/todo.webp',
         title: 'Мобильное To-Do «Tasky»',
         description:
           'Мобильное To‑Do «Tasky»: офлайн‑режим, напоминания и синхронизация задач через Firebase.',
