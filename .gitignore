@@ -18,3 +18,8 @@ yarn-error.log*
 
 # Generated files
 *.js.map
+
+# Build outputs
+dist/
+*.min.css
+*.min.js
