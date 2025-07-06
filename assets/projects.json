@@ -1,0 +1,40 @@
+{
+  "projects": [
+    {
+      "image": "assets/img/photo_site.png",
+      "title": "Фото-портфолио",
+      "description": "Фото‑портфолио: сайт‑визитка современного фотографа, адаптив и стиль.",
+      "author": "Мария, 15 лет"
+    },
+    {
+      "image": "assets/img/vr_htc.png",
+      "title": "VR-квест «Escape the Lab»",
+      "description": "VR‑квест «Escape the Lab» под HTC Vive: три комнаты, таймер и головоломки.",
+      "author": "Алексей, 16 лет"
+    },
+    {
+      "image": "assets/img/scratch_space.png",
+      "title": "Scratch-игра «Space Miner»",
+      "description": "Scratch‑игра «Space Miner»: собери алмазы и уклонись от стремительных астероидов.",
+      "author": "Даниил, 11 лет"
+    },
+    {
+      "image": "assets/img/coffe.png",
+      "title": "Робо-бариста «CoffeeBot»",
+      "description": "Робо‑бариста «CoffeeBot» на Arduino: сварит и подаст кофе гостю по команде.",
+      "author": "Команда «Роботех», 13-14 лет"
+    },
+    {
+      "image": "assets/img/site_coding.png",
+      "title": "Лэндинг «Кодинг — это просто»",
+      "description": "Лэндинг «Кодинг — это просто»: адаптив, подсветка кода и встроенная тёмная тема.",
+      "author": "София, 14 лет"
+    },
+    {
+      "image": "assets/img/todo.png",
+      "title": "Мобильное To-Do «Tasky»",
+      "description": "Мобильное To‑Do «Tasky»: офлайн‑режим, напоминания и синхронизация задач через Firebase.",
+      "author": "Егор, 17 лет"
+    }
+  ]
+}

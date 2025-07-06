@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="IT-Школа 12 - современное обучение программированию и технологиям для детей и подростков">
+  <title>IT-Школа 12 - Обучение программированию для детей</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader__spinner"></div>
+  </div>
+
+  <!-- Header Hero -->
+  <header class="hero">
+    <nav class="hero__nav">
+      <div class="container">
+        <div class="hero__nav-inner">
+          <div class="hero__logo">IT-Школа <span>12</span></div>
+          <button class="hero__menu-burger" aria-label="Открыть меню">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="hero__menu">
+            <li><a href="#about">О школе</a></li>
+            <li><a href="#courses">Курсы</a></li>
+            <li><a href="#projects">Проекты</a></li>
+            <li><a href="#reviews">Отзывы</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="hero__content">
+      <video class="hero__video" preload="none" playsinline muted poster="apps.jpeg">
+        <source src="hero-video.mp4" type="video/mp4">
+      </video>
+      <div class="hero__overlay"></div>
+      <div class="container">
+        <div class="hero__text">
+          <h1 class="hero__title">Превращаем идеи в код</h1>
+          <p class="hero__subtitle">Обучаем программированию, робототехнике и разработке игр детей от 7 до 17 лет</p>
+          <button class="hero__cta btn btn--primary" data-modal-open>Записаться на пробное занятие</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <h2 class="section-title">О нашей школе</h2>
+      <div class="about__content">
+        <div class="about__text">
+          <p>IT-Школа 12 — это современное образовательное пространство, где дети и подростки осваивают востребованные digital-навыки через практику и творчество.</p>
+          <p>Мы учим не просто кодить, а мыслить как настоящие разработчики: находить решения, работать в команде и доводить проекты до конца.</p>
+        </div>
+        <div class="about__features">
+          <div class="about__feature">
+            <div class="about__feature-icon">👨‍🏫</div>
+            <h3>Опытные преподаватели</h3>
+            <p>Практикующие разработчики с педагогическим опытом</p>
+          </div>
+          <div class="about__feature">
+            <div class="about__feature-icon">🎯</div>
+            <h3>Практический подход</h3>
+            <p>80% времени — создание реальных проектов</p>
+          </div>
+          <div class="about__feature">
+            <div class="about__feature-icon">🏆</div>
+            <h3>Результат с первого занятия</h3>
+            <p>Каждый урок — готовый мини-проект</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats">
+    <div class="container">
+      <div class="stats__grid">
+        <div class="stats__item">
+          <div class="stats__number" data-target="600" data-suffix="+">0</div>
+          <div class="stats__label">Выпускников</div>
+        </div>
+        <div class="stats__item">
+          <div class="stats__number" data-target="2">0</div>
+          <div class="stats__label">Года работы</div>
+        </div>
+        <div class="stats__item">
+          <div class="stats__number" data-target="15">0</div>
+          <div class="stats__label">Направлений</div>
+        </div>
+        <div class="stats__item">
+          <div class="stats__number" data-target="98" data-suffix="%">0</div>
+          <div class="stats__label">Довольных родителей</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Courses Section -->
+  <section class="courses" id="courses">
+    <div class="container">
+      <h2 class="section-title">Наши курсы</h2>
+      <div class="courses__grid">
+        <div class="courses__card">
+          <img src="scratch-game.jpg" alt="Скрин из игры на Scratch" class="courses__card-image">
+          <div class="courses__card-content">
+            <h3 class="courses__card-title">Scratch для начинающих</h3>
+            <p class="courses__card-age">7-10 лет</p>
+            <p class="courses__card-desc">Создание игр и анимаций в визуальной среде программирования</p>
+            <div class="courses__card-footer">
+              <span class="courses__card-price">от 3500 ₽/мес</span>
+              <button class="btn btn--secondary" data-modal-open>Подробнее</button>
+            </div>
+          </div>
+        </div>
+        <div class="courses__card">
+          <img src="code.jpeg" alt="Фрагмент кода на экране" class="courses__card-image">
+          <div class="courses__card-content">
+            <h3 class="courses__card-title">Web-разработка</h3>
+            <p class="courses__card-age">12-17 лет</p>
+            <p class="courses__card-desc">HTML, CSS, JavaScript — создание сайтов с нуля</p>
+            <div class="courses__card-footer">
+              <span class="courses__card-price">от 4500 ₽/мес</span>
+              <button class="btn btn--secondary" data-modal-open>Подробнее</button>
+            </div>
+          </div>
+        </div>
+        <div class="courses__card">
+          <img src="apps.jpeg" alt="Иконки приложений на iPhone" class="courses__card-image">
+          <div class="courses__card-content">
+            <h3 class="courses__card-title">Мобильные приложения</h3>
+            <p class="courses__card-age">14-17 лет</p>
+            <p class="courses__card-desc">Разработка приложений для iOS и Android</p>
+            <div class="courses__card-footer">
+              <span class="courses__card-price">от 5000 ₽/мес</span>
+              <button class="btn btn--secondary" data-modal-open>Подробнее</button>
+            </div>
+          </div>
+        </div>
+        <div class="courses__card">
+          <img src="robot.jpeg" alt="Студент собирает робота" class="courses__card-image">
+          <div class="courses__card-content">
+            <h3 class="courses__card-title">Робототехника</h3>
+            <p class="courses__card-age">8-14 лет</p>
+            <p class="courses__card-desc">Конструирование и программирование роботов</p>
+            <div class="courses__card-footer">
+              <span class="courses__card-price">от 4000 ₽/мес</span>
+              <button class="btn btn--secondary" data-modal-open>Подробнее</button>
+            </div>
+          </div>
+        </div>
+        <div class="courses__card">
+          <img src="vr.jpeg" alt="Парень в VR-шлеме" class="courses__card-image">
+          <div class="courses__card-content">
+            <h3 class="courses__card-title">VR/AR разработка</h3>
+            <p class="courses__card-age">13-17 лет</p>
+            <p class="courses__card-desc">Создание приложений виртуальной реальности</p>
+            <div class="courses__card-footer">
+              <span class="courses__card-price">от 5500 ₽/мес</span>
+              <button class="btn btn--secondary" data-modal-open>Подробнее</button>
+            </div>
+          </div>
+        </div>
+        <div class="courses__card">
+          <img src="web-portfolio.jpg" alt="Главная страница сайта-портфолио" class="courses__card-image">
+          <div class="courses__card-content">
+            <h3 class="courses__card-title">Python Pro</h3>
+            <p class="courses__card-age">14-17 лет</p>
+            <p class="courses__card-desc">Углубленное изучение Python и машинного обучения</p>
+            <div class="courses__card-footer">
+              <span class="courses__card-price">от 5000 ₽/мес</span>
+              <button class="btn btn--secondary" data-modal-open>Подробнее</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <h2 class="section-title">Проекты учеников</h2>
+      <div class="swiper projects-swiper">
+        <div class="swiper-wrapper" id="projects-container">
+          <!-- Projects will be loaded here -->
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="benefits">
+    <div class="container">
+      <h2 class="section-title">Почему выбирают нас</h2>
+      <div class="benefits__grid">
+        <div class="benefits__item">
+          <div class="benefits__icon">🎓</div>
+          <h3>Сертификат по окончании</h3>
+          <p>Официальный документ о прохождении курса</p>
+        </div>
+        <div class="benefits__item">
+          <div class="benefits__icon">👥</div>
+          <h3>Малые группы</h3>
+          <p>До 8 человек — внимание каждому ученику</p>
+        </div>
+        <div class="benefits__item">
+          <div class="benefits__icon">🔄</div>
+          <h3>Гибкое расписание</h3>
+          <p>Занятия в удобное время, возможность переноса</p>
+        </div>
+        <div class="benefits__item">
+          <div class="benefits__icon">💻</div>
+          <h3>Оборудование включено</h3>
+          <p>Ноутбуки, планшеты, роботы — всё предоставляем</p>
+        </div>
+        <div class="benefits__item">
+          <div class="benefits__icon">🏠</div>
+          <h3>Онлайн и офлайн</h3>
+          <p>Выбирайте удобный формат обучения</p>
+        </div>
+        <div class="benefits__item">
+          <div class="benefits__icon">🎯</div>
+          <h3>Проектный подход</h3>
+          <p>Портфолио из реальных работ к концу курса</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section class="reviews" id="reviews">
+    <div class="container">
+      <h2 class="section-title">Отзывы родителей и учеников</h2>
+      <div class="swiper reviews-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="reviews__card">
+              <div class="reviews__stars">⭐⭐⭐⭐⭐</div>
+              <p class="reviews__text">Сын ходит на робототехнику уже год. Очень нравится! Преподаватели умеют заинтересовать, объясняют доступно. Ребёнок с удовольствием идёт на каждое занятие.</p>
+              <div class="reviews__author">
+                <strong>Мария Петрова</strong>
+                <span>мама ученика</span>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="reviews__card">
+              <div class="reviews__stars">⭐⭐⭐⭐⭐</div>
+              <p class="reviews__text">Прошёл курс по веб-разработке. За 4 месяца научился делать сайты с нуля! Теперь делаю проекты на заказ. Спасибо преподавателям за терпение и поддержку!</p>
+              <div class="reviews__author">
+                <strong>Александр, 16 лет</strong>
+                <span>выпускник курса</span>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="reviews__card">
+              <div class="reviews__stars">⭐⭐⭐⭐⭐</div>
+              <p class="reviews__text">Дочь начала с Scratch, теперь изучает Python. Видно, как растёт логическое мышление. Очень довольны качеством обучения и подходом к детям.</p>
+              <div class="reviews__author">
+                <strong>Елена Сидорова</strong>
+                <span>мама ученицы</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trial Form Section -->
+  <section class="trial-form">
+    <div class="container">
+      <div class="trial-form__content">
+        <h2 class="section-title">Запишитесь на бесплатное пробное занятие</h2>
+        <p class="trial-form__subtitle">Познакомимся, покажем как проходят занятия, определим уровень и подберём курс</p>
+        <form class="trial-form__form">
+          <input type="text" placeholder="Имя ребёнка" required class="trial-form__input">
+          <input type="tel" placeholder="Телефон" required class="trial-form__input">
+          <select class="trial-form__input" required>
+            <option value="">Выберите курс</option>
+            <option>Scratch для начинающих</option>
+            <option>Web-разработка</option>
+            <option>Мобильные приложения</option>
+            <option>Робототехника</option>
+            <option>VR/AR разработка</option>
+            <option>Python Pro</option>
+          </select>
+          <button type="submit" class="btn btn--primary btn--large">Записаться бесплатно</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partners Section -->
+  <section class="partners">
+    <div class="container">
+      <h2 class="section-title">Наши партнёры</h2>
+    </div>
+    <div class="partners__wrapper">
+      <div class="partners__grid" id="partners-grid">
+        <div class="partners__item">Microsoft</div>
+        <div class="partners__item">Яндекс</div>
+        <div class="partners__item">Mail.ru</div>
+        <div class="partners__item">Сбер</div>
+        <div class="partners__item">VK</div>
+        <div class="partners__item">1С</div>
+        <div class="partners__item">Tinkoff</div>
+        <div class="partners__item">JetBrains</div>
+        <!-- Дублируем для бесшовной прокрутки -->
+        <div class="partners__item">Microsoft</div>
+        <div class="partners__item">Яндекс</div>
+        <div class="partners__item">Mail.ru</div>
+        <div class="partners__item">Сбер</div>
+        <div class="partners__item">VK</div>
+        <div class="partners__item">1С</div>
+        <div class="partners__item">Tinkoff</div>
+        <div class="partners__item">JetBrains</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- News Section -->
+  <section class="news">
+    <div class="container">
+      <h2 class="section-title">Новости и события</h2>
+      <div class="news__grid">
+        <article class="news__card">
+          <div class="news__date">15 января 2025</div>
+          <h3 class="news__title">Открыт набор на зимний интенсив</h3>
+          <p class="news__text">Каникулярная программа по созданию игр на Unity. Успейте записаться!</p>
+          <a href="#" class="news__link">Подробнее →</a>
+        </article>
+        <article class="news__card">
+          <div class="news__date">10 января 2025</div>
+          <h3 class="news__title">Наши ученики — призёры хакатона</h3>
+          <p class="news__text">Команда IT-Школы 12 заняла 2 место на городском хакатоне по робототехнике.</p>
+          <a href="#" class="news__link">Подробнее →</a>
+        </article>
+        <article class="news__card">
+          <div class="news__date">1 января 2025</div>
+          <h3 class="news__title">Новый курс: Кибербезопасность</h3>
+          <p class="news__text">Запускаем курс по информационной безопасности для подростков 14-17 лет.</p>
+          <a href="#" class="news__link">Подробнее →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" id="contacts">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__column">
+          <h3 class="footer__logo">IT-Школа 12</h3>
+          <p>Современное IT-образование для детей и подростков</p>
+          <div class="footer__social">
+            <a href="#" aria-label="VKontakte">VK</a>
+            <a href="#" aria-label="Telegram">TG</a>
+            <a href="#" aria-label="YouTube">YT</a>
+          </div>
+        </div>
+        <div class="footer__column">
+          <h4>Курсы</h4>
+          <ul>
+            <li><a href="#">Scratch</a></li>
+            <li><a href="#">Web-разработка</a></li>
+            <li><a href="#">Мобильные приложения</a></li>
+            <li><a href="#">Робототехника</a></li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <h4>Информация</h4>
+          <ul>
+            <li><a href="#">О школе</a></li>
+            <li><a href="#">Преподаватели</a></li>
+            <li><a href="#">Расписание</a></li>
+            <li><a href="#">Цены</a></li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <h4>Контакты</h4>
+          <p>📍 г. Москва, ул. Программистов, 12</p>
+          <p>📞 +7 (495) 123-45-67</p>
+          <p>✉️ info@itschool12.ru</p>
+          <p>🕐 Пн-Сб: 10:00-20:00</p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2025 IT-Школа 12. Все права защищены.</p>
+        <a href="#">Политика конфиденциальности</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal" id="modal">
+    <div class="modal__overlay"></div>
+    <div class="modal__content">
+      <button class="modal__close" aria-label="Закрыть">&times;</button>
+      <h3 class="modal__title">Записаться на курс</h3>
+      <form class="modal__form">
+        <input type="text" placeholder="Имя родителя" required>
+        <input type="text" placeholder="Имя ребёнка" required>
+        <input type="tel" placeholder="Телефон" required>
+        <input type="email" placeholder="Email" required>
+        <select required>
+          <option value="">Выберите курс</option>
+          <option>Scratch для начинающих</option>
+          <option>Web-разработка</option>
+          <option>Мобильные приложения</option>
+          <option>Робототехника</option>
+          <option>VR/AR разработка</option>
+          <option>Python Pro</option>
+        </select>
+        <textarea placeholder="Комментарий (необязательно)" rows="3"></textarea>
+        <button type="submit" class="btn btn--primary btn--large">Отправить заявку</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
