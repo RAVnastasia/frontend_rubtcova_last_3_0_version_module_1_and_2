@@ -1,6 +1,6 @@
 # IT-Школа 12 - Сайт школы программирования
 
-![Version](https://img.shields.io/badge/version-3.0-orange.svg)
+![Version](https://img.shields.io/badge/version-1.2-orange.svg)
 ![HTML5](https://img.shields.io/badge/HTML5-E34C26?logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
@@ -93,5 +93,5 @@ frontend_rubtcova_last/
 
 ---
 
-**Версия:** 3.0  
+**Версия:** 1.2  
 **Дата релиза:** Январь 2025
